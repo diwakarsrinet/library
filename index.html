@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pustkalaya</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="header">
+            <div id="logo-container">
+                <img src="./assets/library.png" alt="library icon" id="logo">
+                <span id="title">Pustkalaya</span>
+            </div>
+            <div id="heading">
+                <span>Your books collection</span>
+            </div>
+            <button id="btnAdd"><img src="./assets/book-plus.png" alt="add new book" id="addBookIcon"> Add new book</button>
+        </div>
+        <div id="main">
+            <div id="books-container"></div>
+        </div>
+
+        <dialog id="addBookDialog">
+            <form action="" id="newBookForm">
+                <button id="closeFormButton">X</button>
+                <fieldset>
+                    <legend>Add a book</legend>
+                    <div id="formElements">
+                        <div>
+                            <label for="entryBookTitle">Title *</label>
+                            <input type="text" name="entryBookTitle" id="entryBookTitle" required placeholder="Book name" pattern="^[A-za-z\s]+$">
+                        </div>
+                        <div>
+                            <label for="entryBookAuthor">Author *</label>
+                            <input type="text" name="entryBookAuthor" id="entryBookAuthor" required placeholder="Author name" pattern="^[A-za-z\s]+$">
+                        </div>
+                        <div>
+                            <label for="entryBookPages">No. of pages *</label>
+                            <input type="number" name="entryBookPages" id="entryBookPages" required placeholder="Pages in the book">
+                        </div>
+                        <div>
+                            <label for="isEntryRead">Read?</label>
+                            <input type="checkbox" name="isEntryRead" id="isEntryRead">
+                        </div>
+                        <button id="addBookFormBtn" type="submit" formmethod="dialog">Add to collection</button>
+                    </div>
+                </fieldset>
+            </form>
+        </dialog>
+
+        <div id="footer">
+            <span>This project has been completed using</span>
+            <img src="./assets/language-html5.png" alt="language-html5" class="footer-icon">
+            <img src="./assets/language-css3.png" alt="language-css3" class="footer-icon">
+            <img src="./assets/language-javascript.png" alt="language-javascript" class="footer-icon">
+        </div>
+    </div>
+</body>
+</html>
