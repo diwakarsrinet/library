@@ -87,7 +87,7 @@ body {
 
 #books-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.25fr));
     gap: 2rem;
     padding: 2rem;
 }
@@ -99,10 +99,11 @@ body {
     padding: 1rem;
     border-radius: 1rem;
     display: grid;
+    grid-template-columns: auto auto;
 }
 
 .cards:hover {
-    background-color: #f0abfc;
+    box-shadow: 0 4px 8px 0 rgba(34, 44, 197, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .bookTitle {
@@ -112,28 +113,37 @@ body {
     background-color: #f0abfc;
     align-self: center;
     padding: 0.2rem;
+    grid-column: span 2;
 }
 
 .bookAuthor {
     font-style: italic;
     line-height: 1.2rem;
+    grid-column: span 2;
 }
 
-.bookPages {
+.bookPages,
+.bookReadStatus
+{
     line-height: 1.2rem;
+    grid-column: span 2;
 }
 
 .bookDeleteButton {
-    padding: 4px;
-    background: #172554;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 0.5rem;
+    filter: invert(17%) sepia(10%) saturate(6240%) hue-rotate(198deg) brightness(85%) contrast(101%);
+    justify-self: end;
 }
 
-.bookDeleteButton:hover {
-    background: #3f62d3;
+.changeReadStatus
+{
+    filter: invert(17%) sepia(10%) saturate(6240%) hue-rotate(198deg) brightness(85%) contrast(101%);
+    justify-self: start;
+}
+
+.bookDeleteButton:hover,
+.changeReadStatus:hover
+{
+    filter: invert(62%) sepia(90%) saturate(7121%) hue-rotate(221deg) brightness(92%) contrast(79%);
 }
 
 #addBookDialog {
